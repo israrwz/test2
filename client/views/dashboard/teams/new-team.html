@@ -1,0 +1,83 @@
+<template name="newTeam">
+            <header class="header bg-white b-b b-light">
+              <p><i class="fa fa-list"></i> New Team</p>
+            </header>
+            <section class="scrollable wrapper">          
+              <div class="row">
+                <div class="col-lg-6">
+                  <section class="panel panel-default">
+                  <header class="panel-heading font-bold">Team Details</header>
+                    <div class="panel-body">
+
+                      <form class="bs-example form-horizontal" id="newTeamForm">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">Name</label>
+                          <div class="col-lg-9">
+                            <input type="text" name="name" class="form-control" placeholder="Team Name">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">Description</label>
+                          <div class="col-lg-9">
+                            <textarea name="description" class="form-control" placeholder="Team Description"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Team Visibility</label>
+                            <div class="col-sm-9">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <!-- radio -->
+                                  <div class="radio">
+                                    <label class="radio-custom">
+                                      <input type="radio" name="visibility" value="on" checked="checked">
+                                      <i class="fa fa-circle-o checked"></i>
+                                      Public
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label class="radio-custom">
+                                      <input type="radio" name="visibility" value="off">
+                                      <i class="fa fa-circle-o"></i>
+                                      Private
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="col-lg-offset-3 col-lg-9">
+                            <button type="button" name="save" class="btn-save btn btn-sm btn-primary">Save Team</button>
+                          </div>
+                        </div>
+                      </form>
+
+                    </div>
+                  </section>
+                </div>
+
+                <div class="col-lg-6">
+                  <section class="panel panel-default">
+                  <header class="panel-heading font-bold">Team Members</header>
+                    <div class="panel-body">
+
+                      <form class="bs-example form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Name</label>
+                          <div class="col-lg-10">
+                            <input type="text" name="team-name" class="form-control" placeholder="Team Name">
+                          </div>
+                        </div>
+                      </form>
+
+                    </div>
+                  </section>
+                </div>
+
+
+              </div>
+            </section>
+</template>

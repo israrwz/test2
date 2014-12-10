@@ -1,0 +1,27 @@
+
+<template name="homepage_layout">
+  <!--[if lt IE 9]>
+    <p class="browser-warning"><strong><i class="icon-exclamation-sign"></i> Warning</strong> - You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to properly view this website.</p>
+  <![endif]-->
+  <!-- header -->
+  <style>
+	.navbar-nav > li > a{
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+
+  {{customcss}}
+  </style>
+  <header id="header" class="navbar navbar-fixed-top bg-white box-shadow b-b b-light"  data-spy="affix" data-offset-top="1">
+   	    {{> yield region="homepage_header"}}
+  </header>
+  <!-- / header -->
+  <section id="content" class="{{contentclass}}">  
+    {{> yield}}
+  </section>
+  <!-- footer -->
+  <footer id="footer" style="maargin-top:20px;">
+   	    {{> yield region="homepage_footer"}}
+  </footer>
+</template>

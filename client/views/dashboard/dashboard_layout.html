@@ -1,0 +1,23 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<template name="dashboard_layout">
+  <!--[if lt IE 9]>
+    <p class="browser-warning"><strong><i class="icon-exclamation-sign"></i> Warning</strong> - You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to properly view this website.</p>
+  <![endif]-->
+  <section class="vbox">
+  {{> yield region="header"}}
+      <section>
+      <section class="hbox stretch">
+ 	    {{> yield region="aside"}}
+        <section id="content">
+          <section class="vbox">
+  			{{> yield}}
+  		  </section>
+  		  <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+  		</section>
+  	  </section>
+  	  </section>
+  </section>
+</template>

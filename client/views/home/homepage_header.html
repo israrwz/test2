@@ -1,0 +1,35 @@
+<template name="homepage_header">
+    <div class="container">
+      <div class="navbar-header">        
+        <a href="#" class="navbar-brand"><img src="images/logo.png" class="m-r-sm"><span class="text-muted">TaskWall</span></a>
+        <button class="btn btn-link visible-xs" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="price.html">Plans & Pricing</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+        {{#if currentUser}}
+          <li>
+            <div class="m-t-sm"><a href="/dashboard" class="btn btn-sm btn-info m-l">Dashboard</a></div>
+          </li>
+          <li>
+            <div class="m-t-sm"><a class="btn btn-link btn-sm" href="/sign-out">Logout</a></div>
+          </li>
+        {{else}}          
+          <li>
+            <div class="m-t-sm"><a href="/login" class="btn btn-link btn-sm">Sign in</a> <a href="/register" class="btn btn-sm btn-success m-l"><strong>Create Account</strong></a></div>
+          </li>
+        {{/if}}
+        </ul>
+      </div>
+    </div>
+</template>
